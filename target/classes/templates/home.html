@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Paytm Payment Form</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<form method="post" action="/submitPaymentDetail" id="paymentForm">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left text-center">
+                <img src="https://i.pinimg.com/originals/00/ce/a1/00cea11426d626ebff64d81e404ad04b.jpg" alt="Paytm Logo"/>
+                <h3>Welcome</h3>
+                <p>Secure and easy payment with Paytm.</p>
+            </div>
+            <div class="col-md-9 register-right">
+                <h3 class="register-heading">Pay with Paytm</h3>
+                <div class="row register-form">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input id="ORDER_ID" tabindex="1" maxlength="20" size="20" name="ORDER_ID" autocomplete="off"
+                                   placeholder="Order ID" class="form-control" required/>
+                            <div class="invalid-feedback">
+                                Please enter a valid Order ID.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Customer ID" name="CUST_ID" required/>
+                            <div class="invalid-feedback">
+                                Please enter your Customer ID.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Industry Type ID" name="INDUSTRY_TYPE_ID" required/>
+                            <div class="invalid-feedback">
+                                Please enter the Industry Type ID.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Channel ID" name="CHANNEL_ID" required/>
+                            <div class="invalid-feedback">
+                                Please enter the Channel ID.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" min="1" step="any" class="form-control" placeholder="Transaction Amount" name="TXN_AMOUNT" required/>
+                            <div class="invalid-feedback">
+                                Please enter a valid Transaction Amount.
+                            </div>
+                        </div>
+                        <button type="submit" class="btnRegister">Pay with Paytm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- <script>
+    // JavaScript to add custom validation messages
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var form = document.getElementById('paymentForm');
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        }, false);
+    })();
+</script> -->
+</body>
+</html>
